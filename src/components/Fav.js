@@ -21,7 +21,7 @@ class Fav extends React.Component {
         const { user } = this.props.auth0;
         //console.log(user);
 
-        const URL = `https://ent-301-exam.herokuapp.com/getFav?email=${user.email}`
+        const URL = `https://exam-test-farah.herokuapp.com/getFav?email=${user.email}`
         axios
             .get(URL)
             .then(results => {
@@ -46,7 +46,7 @@ class Fav extends React.Component {
         }
 /*         const URL = `http://localhost:3001/rmChar/${index}`
  */        axios
-            .delete(`https://ent-301-exam.herokuapp.com/rmChar/${index}`, { params: Data })
+            .delete(`https://exam-test-farah.herokuapp.com/rmChar/${index}`, { params: Data })
             .then(data => {
                 this.setState({
                     HPArr: data.data.Chars
@@ -92,7 +92,7 @@ showModal=(i)=>{
             email:user.email,
         }
         axios
-        .put(`https://ent-301-exam.herokuapp.com/${this.state.index}`,newData)
+        .put(`https://exam-test-farah.herokuapp.com/updateChar/${this.state.index}`,newData)
         .then(results=>{
             this.setState({
                 HPArr:results.data.Chars

@@ -19,7 +19,7 @@ class Char extends React.Component {
     }
     getData = async () => {
         axios
-            .get(`https://ent-301-exam.herokuapp.com/getAll`)
+            .get(`https://exam-test-farah.herokuapp.com/getAll`)
             .then(results => {
                 this.setState({
                     HPArr: results.data,
@@ -29,7 +29,7 @@ class Char extends React.Component {
     }
 
     addToFav=(item)=>{
-            const URLS = `https://ent-301-exam.herokuapp.com/add`
+            const URLS = `https://exam-test-farah.herokuapp.com/add`
             const name = item.name;
             const image = item.image;
             const { user } = this.props.auth0;
